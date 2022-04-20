@@ -68,4 +68,8 @@ Output #10: 7
 # Computed Output
 ![image](https://user-images.githubusercontent.com/69643313/164203979-7f928309-5590-4eb4-aa69-bf35180f16a4.png)
 
+# How to run 
+Python 3 version 3.7 or above will suffice.
+Python unit testing framework - Python language version of JUnit by Kent Beck and Erich Gamma.
 
+To run make a git clone 
