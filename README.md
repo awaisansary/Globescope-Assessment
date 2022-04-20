@@ -5,7 +5,37 @@ Program using directional graphs to plan train rides.
 The local commuter railroad services a number of towns.  Because of monetary concerns, all of the tracks are 'one-way.' That is, a route from A to B does not imply the existence of a route from B to A. In fact, even if both of these routes do happen to exist, they are distinct and are not necessarily the same distance!
 
 The purpose of this problem is to help the railroad provide its customers with information about the routes. In particular, you will compute the distance along a certain route, the number of different routes between two towns, and the shortest route between two towns.
+
 # Approach 
+To solve this task I decided to using the shortest path algorithm. Dijkstra's original variant found the shortest path between two nodes, but I would like to apply the most common variant fixes each single node as the "start" node and finds shortest paths from the start node to all other reachable nodes in the graph, producing a shortest-path dictionary.
+
+Let the node at which we are starting be called the start node. Let the distance of node Y be the distance from the initial node to Y. Dijkstra's algorithm will assign some initial distance values and will try to improve them step by step.
+
+To do this in a more technical way I create a set named visit_nodes and loop through all the nodes, initialize the visit_nodes with the start node only.
+Next, I iterated through the unvisited nodes inside the visit_nodes set and took the next_node.
+I further appended all neighbour nodes of the above next_node into the visit_nodes set and calculate or re-update the distances from the start node to each neighbour node and stored the minimum route inside the previous_nodes list and then stored the minimum distance inside the shortest_routes list.
+Lastly, I stpped the iteration when all the visit_nodes were set and I had no more reachable nodes to add into the visit_nodes set.
+
+I decided to solve this exercise using Node which allows me to easily turn the program into a web service in the future that can inform users about optimised train connections.
+
+To elaborate on the chunks of code in the code file:
+
+1. The first Djikstra's class is implemented to store all of the shortest paths and distances from every node to all reachable nodes.
+2. The class Railroad receives the city-to-city railroad and their distances such as "AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7" when the Dijkstras dictionary is 
+     {'A': {'B': 5.0, 'C': 9.0, 'D': 1.0, 'E': 3.0},
+     'B': {'B': 9.0, 'C': 4.0, 'D': 12.0, 'E': 6.0},
+     'C': {'B': 5.0, 'C': 9.0, 'D': 8.0, 'E': 2.0},
+     'D': {'B': 5.0, 'C': 8.0, 'D': 16.0, 'E': 2.0},
+     'E': {'B': 3.0, 'C': 7.0, 'D': 15.0, 'E': 9.0}}
+   
+   and installation of methods for  
+    - shortest routes,
+    - the distance of specific routes,
+    - the number of routes from one city to another with a max number of stops,
+    - the number of routes from one city to another with an exact number of stops,
+    - the number of routes from one city to another with less than a specified distance.
+3. The test cases to find all the distances.
+    
 
 # Graph
 AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
