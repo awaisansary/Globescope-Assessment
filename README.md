@@ -23,16 +23,24 @@ To elaborate on the chunks of code in the code file:
 1. The first Djikstra's class is implemented to store all of the shortest paths and distances from every node to all reachable nodes.
 2. The class Railroad receives the city-to-city railroad and their distances such as "AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7" when the Dijkstras dictionary is 
      {'A': {'B': 5.0, 'C': 9.0, 'D': 1.0, 'E': 3.0},
+     
      'B': {'B': 9.0, 'C': 4.0, 'D': 12.0, 'E': 6.0},
+     
      'C': {'B': 5.0, 'C': 9.0, 'D': 8.0, 'E': 2.0},
+     
      'D': {'B': 5.0, 'C': 8.0, 'D': 16.0, 'E': 2.0},
+     
      'E': {'B': 3.0, 'C': 7.0, 'D': 15.0, 'E': 9.0}}
    
    and installation of methods for  
     - shortest routes,
+    
     - the distance of specific routes,
+    
     - the number of routes from one city to another with a max number of stops,
+    
     - the number of routes from one city to another with an exact number of stops,
+    
     - the number of routes from one city to another with less than a specified distance.
 3. The test cases to find all the distances.
     
@@ -55,14 +63,23 @@ In the sample data below, there are three such trips: A to C (via B,C,D); A to C
 
 # Expected Ouptut
 Output #1: 9
+
 Output #2: 5
+
 Output #3: 13
+
 Output #4: 22
+
 Output #5: NO SUCH ROUTE
+
 Output #6: 2
+
 Output #7: 3
+
 Output #8: 9
+
 Output #9: 9
+
 Output #10: 7
 
 # Computed Output
@@ -74,6 +91,9 @@ Python 3 version 3.7 or above will suffice.
 Python unit testing framework - Python language version of JUnit by Kent Beck and Erich Gamma.
 
 To run make a git clone 
+
 https://github.com/awaisansary/Globescope-Assessment.git
+
 Run the python file on GitHub Desktop directly
-Rr as I have used use Google Colaboratory to upload the python notebook (code.ipynb) to get outputs per cell.
+
+Or as I have used use Google Colaboratory to upload the python notebook (code.ipynb) to get outputs per cell.
