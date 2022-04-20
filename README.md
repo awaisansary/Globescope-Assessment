@@ -73,3 +73,6 @@ Python 3 version 3.7 or above will suffice.
 Python unit testing framework - Python language version of JUnit by Kent Beck and Erich Gamma.
 
 To run make a git clone 
+https://github.com/awaisansary/Globescope-Assessment.git
+Run the python file on GitHub Desktop directly
+Rr as I have used use Google Colaboratory to upload the python notebook (code.ipynb) to get outputs per cell.
