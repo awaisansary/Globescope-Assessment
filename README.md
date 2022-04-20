@@ -22,6 +22,7 @@ To elaborate on the chunks of code in the code file:
 
 1. The first Djikstra's class is implemented to store all of the shortest paths and distances from every node to all reachable nodes.
 2. The class Railroad receives the city-to-city railroad and their distances such as "AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7" when the Dijkstras dictionary is 
+     
      {'A': {'B': 5.0, 'C': 9.0, 'D': 1.0, 'E': 3.0},
      
      'B': {'B': 9.0, 'C': 4.0, 'D': 12.0, 'E': 6.0},
@@ -34,16 +35,11 @@ To elaborate on the chunks of code in the code file:
    
    and installation of methods for  
     - shortest routes,
-    
-    - the distance of specific routes,
-    
-    - the number of routes from one city to another with a max number of stops,
-    
-    - the number of routes from one city to another with an exact number of stops,
-    
+    - the distance of specific routes,    
+    - the number of routes from one city to another with a max number of stops,    
+    - the number of routes from one city to another with an exact number of stops,    
     - the number of routes from one city to another with less than a specified distance.
 3. The test cases to find all the distances.
-    
 
 # Graph
 AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
